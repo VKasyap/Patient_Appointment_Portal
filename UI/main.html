@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link href="hospital.svg" rel="icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./mainScript.js"></script>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="main.html">Home</a>
+      <a href="./signin/signin.html">Sign In</a>
+      <a href="./signup/signup.html">Sign Up</a>
+      <a href="#">About Us</a>
+      <a href="#">Best Doctors</a>
+      <a href="#">Announcements</a>
+      <a href="./AppointmentsList/AppointmentsList.html">View Appointments</a>
+      <a href="./Admin/Admin.html">Admin</a>
+    </div>
+    <div class="container-fluid content" id="contentShift">
+      <div
+        class="row bg-info p-1"
+        style="border-bottom: 5px solid rgb(247 114 0)"
+      >
+        <div class="col-1 mt-1">
+          <span
+            style="font-size: 30px; cursor: pointer; color: white"
+            id="menuBarIcon"
+            onclick="openNav()"
+            >&#9776;</span
+          >
+        </div>
+        <div
+          class="col-11 col-lg-2 p-2 text-center text-lg-left"
+          style="font-size: 25px; font-weight: bold; color: white"
+        >
+          Care For Life
+        </div>
+        <div class="col-8 col-lg-6" id="search">
+          <div class="input-group m-2">
+            <input
+              type="text"
+              id="searchVal"
+              class="form-control"
+              placeholder="Search by hospital Name"
+              aria-label="Search"
+              aria-describedby="basic-addon1"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text" onclick="NavigateToSearch()"
+                ><i class="fa fa-search"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3 mt-2">
+          <div
+            class="p-2 text-right text-white"
+            style="font-family: cursive, Courier, monospace"
+          >
+            HELLO USER
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 p-1">
+          <marquee>
+            Hello everyone welcome to our page care for life..!! Here you can
+            take the appointment from doctors...!! Any time available 24/7.
+          </marquee>
+        </div>
+      </div>
+
+      <div class="row p-3 details" id="details">
+        <div class="col-12 text-center">
+          <h4>Find the best hospitals in nearby cities</h4>
+        </div>
+        <div id="detailsLoader">
+          Loading...
+          <div class="spinner-grow text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div class="row p-2 tips">
+        <div class="col-12 border border-info p-2 text-center">
+          <h1 class="p-2">Health Tips</h1>
+          <div class="row p-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 mr-1">
+              <div class="row rounded-pill text-center p-2 tipsTiles">
+                <div class="col-3 text-center p-0 contentCenter">
+                  <img
+                    src="https://static.toiimg.com/photo/59878654.cms"
+                    class="img-thumbnail rounded-circle"
+                    alt="No junk food"
+                    width="150px"
+                  />
+                </div>
+                <div class="col-9 contentCenter">
+                  <p
+                    class="m-0"
+                    style="color: #09a9dbf2; font-weight: bold; font-size: 16px"
+                  >
+                    Avoid processed junk food
+                  </p>
+                  <hr class="m-0" />
+                  <p class="m-0">
+                    These foods have been engineered to trigger your pleasure
+                    centers
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 mr-1">
+              <div class="row rounded-pill text-center p-2 tipsTiles">
+                <div class="col-3 text-center p-0 contentCenter">
+                  <img
+                    src="https://images.squarespace-cdn.com/content/v1/54e4862de4b0004c775a3d5a/1458038342275-77KNNG3IJI27OMVC4Q0V/ke17ZwdGBToddI8pDm48kE4McPXvF5MB66gs8YuQrcFZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpybQCync94wKUhn-70nFpYu6jaJ4ahhd86fk_aR1SadxCThzKFKyntlP7Wfm2hQBbQ/sleeping-baby.jpg?format=500w"
+                    class="img-thumbnail rounded-circle"
+                    alt="Have a nice sleep"
+                    width="150px"
+                  />
+                </div>
+                <div class="col-9 contentCenter">
+                  <p
+                    class="m-0"
+                    style="color: #09a9dbf2; font-weight: bold; font-size: 16px"
+                  >
+                    Get enough sleep
+                  </p>
+                  <hr class="m-0" />
+                  <p class="m-0">
+                    Poor sleep can drive insulin resistance and reduce your
+                    physical and mental performance
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+          </div>
+          <div class="row p-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 mr-1">
+              <div class="row rounded-pill text-center p-2 tipsTiles">
+                <div class="col-3 text-center p-0 contentCenter">
+                  <img
+                    src="https://1.bp.blogspot.com/-GOmN4CJ56Z0/VZ_78ES_RkI/AAAAAAAAAq4/zTA_Y4j67iQ/s1600/no-diet.jpg"
+                    class="img-thumbnail rounded-circle"
+                    alt="No junk food"
+                    width="150px"
+                  />
+                </div>
+                <div class="col-9 contentCenter">
+                  <p
+                    class="m-0"
+                    style="color: #09a9dbf2; font-weight: bold; font-size: 16px"
+                  >
+                    Don't go on a diet
+                  </p>
+                  <hr class="m-0" />
+                  <p class="m-0">
+                    Diets are notoriously ineffective and rarely work well in
+                    the long term
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 mr-1">
+              <div class="row rounded-pill text-center p-2 tipsTiles">
+                <div class="col-3 text-center p-0 contentCenter">
+                  <img
+                    src="https://previews.123rf.com/images/ssstocker/ssstocker1707/ssstocker170700219/82179673-drink-more-water-for-health-poster-glasses-with-water-in-hands-on-blue-background-vector-illustratio.jpg"
+                    class="img-thumbnail rounded-circle"
+                    alt="No junk food"
+                    width="150px"
+                  />
+                </div>
+                <div class="col-9 contentCenter">
+                  <p
+                    class="m-0"
+                    style="color: #09a9dbf2; font-weight: bold; font-size: 16px"
+                  >
+                    Drink some water, especially before meals
+                  </p>
+                  <hr class="m-0" />
+                  <p class="m-0">
+                    Drinking enough water can have numerous benefits
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+          </div>
+          <div class="row p-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 mr-1">
+              <div class="row rounded-pill text-center p-2 tipsTiles">
+                <div class="col-3 text-center p-0 contentCenter">
+                  <img
+                    src="https://cdn1.sph.harvard.edu/wp-content/uploads/sites/30/2012/09/vegetables-and-fruits-farmers-market.jpg"
+                    class="img-thumbnail rounded-circle"
+                    alt="No junk food"
+                    width="150px"
+                  />
+                </div>
+                <div class="col-9 contentCenter">
+                  <p
+                    class="m-0"
+                    style="color: #09a9dbf2; font-weight: bold; font-size: 16px"
+                  >
+                    Eat vegetables and fruits
+                  </p>
+                  <hr class="m-0" />
+                  <p class="m-0">
+                    Vegetables and fruits are loaded with prebiotic fiber,
+                    vitamins, minerals, and many antioxidants
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 mr-1">
+              <div class="row rounded-pill text-center p-2 tipsTiles">
+                <div class="col-3 text-center p-0 contentCenter">
+                  <img
+                    src="https://img.jakpost.net/c/2019/04/02/2019_04_02_69095_1554196119._large.jpg"
+                    class="img-thumbnail rounded-circle"
+                    alt="No junk food"
+                    width="150px"
+                  />
+                </div>
+                <div class="col-9 contentCenter">
+                  <p
+                    class="m-0"
+                    style="color: #09a9dbf2; font-weight: bold; font-size: 16px"
+                  >
+                    Make sure to eat enough protein
+                  </p>
+                  <hr class="m-0" />
+                  <p class="m-0">
+                    Eating enough protein is vital for optimal health and
+                    particularly important for weight loss
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+          </div>
+          <div class="row p-1">
+            <div class="col-1"></div>
+            <div class="col-lg-5 mr-1">
+              <div class="row rounded-pill text-center p-2 tipsTiles">
+                <div class="col-3 text-center p-0 contentCenter">
+                  <img
+                    src="https://i.dietdoctor.com/wp-content/uploads/2019/11/Norway-reduces-sugar-consumption.jpg?auto=compress%2Cformat&w=1600&h=900&fit=crop"
+                    class="img-thumbnail rounded-circle"
+                    alt="No junk food"
+                    width="150px"
+                  />
+                </div>
+                <div class="col-9 contentCenter">
+                  <p
+                    class="m-0"
+                    style="color: #09a9dbf2; font-weight: bold; font-size: 16px"
+                  >
+                    Minimize your sugar intake
+                  </p>
+                  <hr class="m-0" />
+                  <p class="m-0">
+                    Do not add large amount of sugar as it can harm your
+                    metabolic health
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 mr-1">
+              <div class="row rounded-pill text-center p-2 tipsTiles">
+                <div class="col-3 text-center p-0 contentCenter">
+                  <img
+                    src="https://www.verywellfit.com/thmb/pWwULi-UFs2JKBiUicGLQo9a2gQ=/2119x1414/filters:fill(FFDB5D,1)/GettyImages-585296166-8d0d9ce48b6a43cf854e4856aceb077f.jpg"
+                    class="img-thumbnail rounded-circle"
+                    alt="No junk food"
+                    width="150px"
+                  />
+                </div>
+                <div class="col-9 contentCenter">
+                  <p
+                    class="m-0"
+                    style="color: #09a9dbf2; font-weight: bold; font-size: 16px"
+                  >
+                    Track your food intake every now and then
+                  </p>
+                  <hr class="m-0" />
+                  <p class="m-0">
+                    Weigh your food and use a nutrition tracker to know the
+                    intake of calaries
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <h1><span>Care For Life</span></h1>
+        <div class="container-fluid">
+          <div class="row link">
+            <div class="col-1"></div>
+            <div class="col-3 text-center">
+              <a href="#">About</a>
+              <br />
+              <a href="#">Terms and conditions</a>
+            </div>
+            <div class="col-2 line">
+              <!-- border-right border-warning -->
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4 text-center">
+              <a href="#">Contact</a>
+              <br />
+              <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+              <div class="fa fa-envelope">
+                mail us -
+                <a href="mailto:careforlife.support@gmail.com"
+                  >careforlife.support@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col text-center">
+              <img src="cfl.png" alt="logo" />
+            </div>
+          </div>
+          <br />
+          <div class="row" style="height: 100px">
+            <div class="col text-center">&#169; 2020</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

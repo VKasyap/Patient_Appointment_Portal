@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="fevicon" href="../signinfev.svg" />
+    <title>Sign in</title>
+    <style>
+      legend {
+        border: groove 2px threedface;
+      }
+      form {
+        padding: 5px;
+        margin: 3px;
+        text-align: center;
+      }
+      fieldset {
+        width: 400px;
+        margin: auto;
+        margin-top: 10px;
+      }
+      body {
+        background-color: aqua;
+      }
+      legend {
+        padding: 5px;
+        font-weight: bold;
+      }
+      label {
+        font-variant: small-caps;
+        font-weight: bold;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #4caf50;
+      }
+      .group {
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bannerMessage" class="text-center p-2"></div>
+    <fieldset>
+      <legend>SIGN IN</legend>
+      <form>
+        <div class="group">
+          <label for="mailid">Email id :</label>
+          <input
+            type="email"
+            name="mailid"
+            placeholder="abc@email.com"
+            id="Email_id"
+          />
+        </div>
+        <div class="group">
+          <label for="password">Password :</label>
+          <input type="password" name="password" id="Pw_id" />
+        </div>
+        <div class="group">
+          <input type="button" value="Sign In" onclick="handleSignin()"/>
+          <a href="../main.html"><input type="button" value="cancel" /></a>
+        </div>
+      </form>
+    </fieldset>
+  </body>
+  <script type="text/javascript" src="signin.js"></script> 
+</html>

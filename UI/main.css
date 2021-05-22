@@ -1,0 +1,168 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* .content{
+    background: rgb(163,163,169);
+    background: -moz-linear-gradient(24deg, rgba(163,163,169,0.43775537040796175) 0%, rgba(234,205,19,0.7355081793967257) 35%, rgba(255,255,255,0.724272224340546) 100%);
+    background: -webkit-linear-gradient(24deg, rgba(163,163,169,0.43775537040796175) 0%, rgba(234,205,19,0.7355081793967257) 35%, rgba(255,255,255,0.724272224340546) 100%);
+    background: linear-gradient(24deg, rgba(163,163,169,0.43775537040796175) 0%, rgba(234,205,19,0.7355081793967257) 35%, rgba(255,255,255,0.724272224340546) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a3a3a9",endColorstr="#ffffff",GradientType=1);
+} */
+
+.details {
+  background: url("https://www.publicdomainpictures.net/pictures/100000/velka/teal-lines-background-texture.jpg");
+  display: flex;
+  justify-content: space-around;
+}
+
+.details .appointmentButton,
+#searchResults .appointmentButton {
+  border: 3px #f77200 solid;
+  background-color: inherit;
+  color: #f77200;
+  border-radius: 10px;
+}
+
+.details .appointmentButton:hover {
+  background-color: white;
+}
+#searchResults .appointmentButton:hover {
+  background-color: #f77200;
+  color: white;
+}
+
+.tipsTiles {
+  height: 127px;
+  background-color: beige;
+}
+
+.tipsTiles .contentCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #17a2b8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  letter-spacing: 0.75px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: chocolate;
+  font-weight: bold;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#contentShift {
+  transition: margin-left 0.5s;
+}
+
+.tips {
+  font-family: serif;
+}
+.tips img {
+  width: 90px;
+  height: 80px;
+}
+.tips h1 {
+  color: black;
+  font-family: "Dancing script", cursive;
+  font-style: italic;
+}
+p {
+  font-family: "Dancing Script", cursive;
+}
+
+footer h1 {
+  font-family: sans-serif;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 40px;
+  max-width: 85%;
+  position: relative;
+}
+footer h1:before {
+  content: "";
+  display: block;
+  width: 34%;
+  height: 2px;
+  background: #f77200;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+footer h1:after {
+  content: "";
+  display: block;
+  width: 34%;
+  height: 2px;
+  background: #f77200;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -2;
+}
+footer span {
+  background-color: #17a2b8;
+  padding: 15px;
+  border-radius: 12px;
+}
+.line {
+  border-right: 3px solid #f77200;
+  height: 120px;
+}
+.link a {
+  color: black;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 990px) {
+  .tipsTiles {
+    height: 95px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .tipsTiles {
+    height: 128px;
+  }
+}
+
+#search a {
+  text-decoration: none;
+}
